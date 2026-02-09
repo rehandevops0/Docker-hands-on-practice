@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  backend:
+    image: nginx
+
+  frontend:
+    image: nginx
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+
